@@ -3,7 +3,12 @@
 import constants from "@/constants";
 import React from "react";
 import { TerminalContextProvider } from "react-terminal";
-import { ReactTerminal } from "react-terminal"
+import dynamic from "next/dynamic";
+
+const ReactTerminal = dynamic(
+  () => import("react-terminal").then(mod => mod.ReactTerminal),
+  { ssr: false }
+);
 
 export default function Home() {
   const [isValidated, setIsValidated] = React.useState(false);
@@ -113,10 +118,10 @@ export default function Home() {
       return (
         <span>
           {visibleFiles.map((file, i) => (
-            <>
-              <span key={file.name}>{file.name}</span>
+            <span key={file.name}>
+              {file.name}
               {i !== visibleFiles.length - 1 && ' '}
-            </>
+            </span>
           ))}
         </span>
       );
@@ -190,7 +195,6 @@ export default function Home() {
       <br />
     </span>
   );
-
   return (
     <TerminalContextProvider>
       <div className="h-screen">
