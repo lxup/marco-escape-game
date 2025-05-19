@@ -1,6 +1,6 @@
 const constants = {
 	title: 'Point Zero !',
-	passwordEscapeGame: 'JULANDRO',
+	passwordEscapeGame: 'julandro',
 }
 
 export default constants;

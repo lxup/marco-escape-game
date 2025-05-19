@@ -166,7 +166,7 @@ export default function Home() {
       );
     },
     validate: (args: string) => {
-      if (args === constants.passwordEscapeGame) {
+      if (args.toLowerCase() === constants.passwordEscapeGame.toLowerCase()) {
         setIsValidated(true);
         return ;
       } else {
