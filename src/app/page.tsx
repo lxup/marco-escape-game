@@ -201,7 +201,8 @@ export default function Home() {
         {isValidated ? (
           <div className="flex items-center justify-center h-full">
             <h1 className="text-4xl font-bold text-green-500 text-center">
-              
+              Bravo !<br />
+              Vous les avez niqués !<br />
             </h1>
           </div>
         ) : (
