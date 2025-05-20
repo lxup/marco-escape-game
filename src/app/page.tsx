@@ -72,10 +72,10 @@ export default function Home() {
       protected: true,
     },
     {
-      name: ".freepalestine",
+      name: ".gsffqbmftujof",
       content: (
         <>
-          <strong># Free Palestine</strong><br />
+          <strong># Free something...</strong><br />
         </>
       ),
       protected: false,
@@ -199,10 +199,16 @@ export default function Home() {
     <TerminalContextProvider>
       <div className="h-screen">
         {isValidated ? (
-          <div className="flex items-center justify-center h-full">
+          <div
+          className="flex items-center justify-center h-full"
+          style={{
+            backgroundImage: `url('https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExOTI0cTh1cGk2NW13aDl1bXFlbzkyZ2R0eGttNXNod3JjaXJ2aTZweSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/G952i4cLWEWJgrsa2j/giphy.gif')`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}
+          >
             <h1 className="text-4xl font-bold text-green-500 text-center">
-              Bravo !<br />
-              Vous les avez niqués !<br />
+              Bravo, tu as sauvé ta réalité !
             </h1>
           </div>
         ) : (
